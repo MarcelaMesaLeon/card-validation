@@ -17,6 +17,8 @@ h1{
     font-size: 60px;
     color: #315b43;
 }
+
+/* Estilos formulario */
 .formContainer{
     display: flex;
     flex-direction: column;
@@ -37,7 +39,7 @@ h1{
     border-radius: 20px;    
 }
 .formContainer button{
-    margin: 15px;
+    margin: 25px;
     padding: 8px;
     width: 12%;
     font-family: "Montserrat";
@@ -55,5 +57,48 @@ h1{
     color: black;
     border-color: #315b43;   
 }
+.noneElement{
+    display: none;
+}
+
+/* Estilos card tarjeta de crédito */
+.creditCardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px;
+}
+.creditCardStyle{
+    width: 550px;
+    height: 310px;
+    background-image: url("./img/fondo1.png");
+    border-radius: 20px;
+}
+.headerSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 25px;
+}
+.headerSection p{
+    font-size: 45px;
+    font-weight: 600;
+    font-style: italic;
+    color: #192e22;
+}
+#chip{
+    padding: 5px;
+    margin-left: 400px;
+    
+}
+.mainSection{
+    padding-left: 45px;
+}
+#numb{
+    font-family: "Play";
+    font-size: 30px;
+    padding-bottom: 12px;
+}
+
 
 
