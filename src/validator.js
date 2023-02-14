@@ -4,7 +4,9 @@ const validator = {
     const array2 = multiplyEvenIndex(array1);
     return validateMutipleOf10(array2);
   },
-  maskify: () => {},
+  maskify: () => {
+
+  },
 };
 
 // Convierte el String del usuario en array, lo reversa y lo convierte en array numerico
@@ -19,7 +21,7 @@ function creditCardReverse(userNum) {
 // Multiplica x2 el numero que esta en las posiciones que son par y devuelve el array con elementos de un solo digito
 function multiplyEvenIndex(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (i % 2 === 0) {
+    if ((i + 1) % 2 === 0) {
       arr[i] = arr[i] * 2;
       arr[i] = sumElements(arr[i]);
     }
@@ -37,6 +39,7 @@ function sumElements(index) {
     numToString.forEach((element) => {
       sum += Number(element);
     });
+    console.log(sum);
     return sum;
   } else {
     const arrayToString = numToString.toString();
@@ -51,6 +54,7 @@ function validateMutipleOf10(arr){
   arr.forEach((element) => {
     total += element;
   });  
+  console.log(total);
   if(total % 10 === 0){
     return true;
   }else{
