@@ -8,15 +8,16 @@ const goBack = document.getElementById("goBack");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userNum = document.getElementById("creditCardNum").value;
-  if (userNum === "") {
-    alert("Debes ingresar un número para validar");
+  if (userNum === "" || isNaN(userNum)) {
+    alert("* Debes ingresar un número para validar, el campo no debe estar vacío \n" + "* Debes ingresar un número válido (sólo caracteres numéricos)");
   } else {
     const validation = validator.isValid(userNum);
     console.log(validation);
     form.reset();   
-    form.classList.add("noneElement");     
-
-    creditCard.innerHTML = card(userNum);
+    form.classList.add("noneElement");   
+    
+    const stringCard = validator.maskify(userNum);
+    creditCard.innerHTML = card(stringCard);
 
     if (validation) {
       validationMessage.innerHTML = valid;

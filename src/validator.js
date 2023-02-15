@@ -4,17 +4,20 @@ const validator = {
     const array2 = multiplyEvenIndex(array1);
     return validateMutipleOf10(array2);
   },
-  maskify: () => {
-
+  maskify: (userNum) => {
+    const stringToArray = Array.from(userNum);
+    const stringComplete = textToShow(stringToArray);
+    return stringComplete;
   },
 };
+
+// isValid
 
 // Convierte el String del usuario en array, lo reversa y lo convierte en array numerico
 function creditCardReverse(userNum) {
   let arrayString = Array.from(userNum);
   arrayString = arrayString.reverse();
   const arrayNum = arrayString.map((num) => Number(num));
-  console.log(arrayNum);
   return arrayNum;  
 }
 
@@ -26,7 +29,6 @@ function multiplyEvenIndex(arr) {
       arr[i] = sumElements(arr[i]);
     }
   }
-  console.log(arr);
   return arr;
 }
 
@@ -39,7 +41,6 @@ function sumElements(index) {
     numToString.forEach((element) => {
       sum += Number(element);
     });
-    console.log(sum);
     return sum;
   } else {
     const arrayToString = numToString.toString();
@@ -54,7 +55,6 @@ function validateMutipleOf10(arr){
   arr.forEach((element) => {
     total += element;
   });  
-  console.log(total);
   if(total % 10 === 0){
     return true;
   }else{
@@ -62,6 +62,30 @@ function validateMutipleOf10(arr){
   }
 }
 
+
+// maskify
+
+// Devuelve string completo con valores enmascarados y a mostrar solicitados
+function textToShow(arr){
+  let arrayToMask = arr.slice(0, -4);
+  const arrayToShow = arr.slice(-4, arr.length + 1);
+  arrayToMask = toReplace(arrayToMask);
+  const arrayCompleted = arrayToMask.concat(arrayToShow);
+  let arrayToString = arrayCompleted.toString();
+  arrayToString = arrayToString.replaceAll(",", " ");
+  
+  return arrayToString;
+}
+
+// Reemplaza los valores de los elementos del array proporcionado por caracter # 
+function toReplace(arr){
+  const replaced = [];
+
+  arr.map(element => {
+    replaced.push(element.replace(/[0-9]/g, "#")); 
+  });
+  return replaced;
+}
 
 
 
