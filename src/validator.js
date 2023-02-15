@@ -72,7 +72,7 @@ function textToShow(arr){
   arrayToMask = toReplace(arrayToMask);
   const arrayCompleted = arrayToMask.concat(arrayToShow);
   let arrayToString = arrayCompleted.toString();
-  arrayToString = arrayToString.replaceAll(",", " ");
+  arrayToString = arrayToString.replaceAll(",", "");
   
   return arrayToString;
 }
@@ -82,7 +82,7 @@ function toReplace(arr){
   const replaced = [];
 
   arr.map(element => {
-    replaced.push(element.replace(/[0-9]/g, "#")); 
+    replaced.push(element.replace(/[0-9a-z]/, "#")); 
   });
   return replaced;
 }
