@@ -38,6 +38,9 @@ h1{
     text-align: center;
     border-radius: 20px;    
 }
+#creditCardNum{
+    width: 18%;
+}
 .actionButton{
     margin: 25px;
     padding: 8px;
@@ -99,6 +102,9 @@ h1{
     font-family: "Play";
     font-size: 30px;
     padding-bottom: 12px;
+}
+#nameCc{
+    font-size: 20px;
 }
 
 /* Estilos mensaje de validación */

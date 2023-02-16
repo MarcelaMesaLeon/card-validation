@@ -5,10 +5,12 @@ const creditCard = document.getElementById("creditCard");
 const validationMessage = document.getElementById("validation");
 const goBack = document.getElementById("goBack");
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userNum = document.getElementById("creditCardNum").value;
-  const stringCard = validator.maskify(userNum);
+  const name = document.getElementById("name").value;
+  
   if (userNum === "") {
     alert("* Debes ingresar un número para validar, el campo no debe estar vacío \n" + "* Debes ingresar un número válido (sólo caracteres numéricos)");
   } else {
@@ -16,7 +18,8 @@ form.addEventListener("submit", (e) => {
     form.reset();   
     form.classList.add("noneElement");   
     
-    creditCard.innerHTML = card(stringCard);
+    const stringCard = validator.maskify(userNum);
+    creditCard.innerHTML = card(stringCard, name);
 
     if (validation) {
       validationMessage.innerHTML = valid;
@@ -37,7 +40,7 @@ goBack.addEventListener("click", (e) =>{
 
 
 // Funciones y variables para construir elementos necesarios
-function card(numb){
+function card(numb, name){
   const creditCardTemplate = `
   <section class= "creditCardStyle">
     <section class= "headerSection">
@@ -47,7 +50,7 @@ function card(numb){
     <img id= "chip" src = "./img/chip.png" alt = "chip"></img>
     <section class= "mainSection">
       <p id= "numb">${numb}</p>
-      <p class= "">Nombre Titular</p>
+      <p id= "nameCc">${name}</p>
     </section>
   </section>
   `;
