@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   const campUserNum = document.getElementById("creditCardNum");
   const userNum = campUserNum.value;
   const name = document.getElementById("name").value;
-  const empty = document.getElementById("empty")
+  const empty = document.getElementById("empty");
   
   if (userNum === "") {
     empty.classList.remove("noneElement");
