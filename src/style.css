@@ -108,7 +108,9 @@ h1{
     
 }
 .mainSection{
-    padding-left: 45px;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
 }
 #numb{
     font-family: "Play";

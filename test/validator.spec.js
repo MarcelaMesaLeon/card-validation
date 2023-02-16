@@ -41,4 +41,22 @@ describe('validator', () => {
       expect(validator.maskify('helloworld')).toBe('######orld');
     });
   });
+
+  describe('validator.franchise', () => {
+    it('debería ser una función', () => {
+      expect(typeof validator.franchise).toBe('function');
+    });
+
+    it('Debería retornar "./img/dinersClub.png" para "3002145698745"', () => {
+      expect(validator.franchise('3002145698745')).toBe('./img/dinersClub.png');
+    });
+
+    it('Debería retornar "./img/visa.png" para "458755471648"', () => {
+      expect(validator.franchise('458755471648')).toBe('./img/visa.png');
+    });
+
+    it('Debería retornar "./img/discover.png" para "6011456987456378"', () => {
+      expect(validator.franchise('6011456987456378')).toBe('./img/discover.png');
+    });
+  });
 });

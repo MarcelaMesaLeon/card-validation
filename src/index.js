@@ -23,7 +23,8 @@ form.addEventListener("submit", (e) => {
     form.classList.add("noneElement");   
     
     const stringCard = validator.maskify(userNum);
-    creditCard.innerHTML = card(stringCard, name);
+    const logoCreditCard = validator.franchise(userNum);
+    creditCard.innerHTML = card(stringCard, name, logoCreditCard);
 
     if (validation) {
       validationMessage.innerHTML = valid;
@@ -44,7 +45,7 @@ goBack.addEventListener("click", (e) =>{
 
 
 // Funciones y variables para construir elementos necesarios
-function card(numb, name){
+function card(numb, name, franchise){
   const creditCardTemplate = `
   <section class= "creditCardStyle">
     <section class= "headerSection">
@@ -53,8 +54,11 @@ function card(numb, name){
     </section>
     <img id= "chip" src = "./img/chip.png" alt = "chip"></img>
     <section class= "mainSection">
-      <p id= "numb">${numb}</p>
-      <p id= "nameCc">${name}</p>
+      <section class= "">
+        <p id= "numb">${numb}</p>
+        <p id= "nameCc">${name}</p>
+      </section>
+      <img id= "franchise" src = ${franchise}></div>
     </section>
   </section>
   `;
