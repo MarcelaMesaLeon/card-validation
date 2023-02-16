@@ -6,13 +6,17 @@ const validationMessage = document.getElementById("validation");
 const goBack = document.getElementById("goBack");
 
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const userNum = document.getElementById("creditCardNum").value;
+  const campUserNum = document.getElementById("creditCardNum");
+  const userNum = campUserNum.value;
   const name = document.getElementById("name").value;
+  const empty = document.getElementById("empty")
   
   if (userNum === "") {
-    alert("* Debes ingresar un número para validar, el campo no debe estar vacío \n" + "* Debes ingresar un número válido (sólo caracteres numéricos)");
+    empty.classList.remove("noneElement");
+    campUserNum.classList.add('redNumb');
   } else {
     const validation = validator.isValid(userNum);
     form.reset();   

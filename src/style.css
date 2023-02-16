@@ -41,8 +41,20 @@ h1{
 #creditCardNum{
     width: 18%;
 }
+.redNumb{
+    border-color: red;
+    background-color: rgb(243, 204, 204);
+}
+.emptyInput{
+    border-color: red;
+}
+#empty{
+    font-size: 12px;
+    color: red;
+    padding: 5px;
+}
 .actionButton{
-    margin: 25px;
+    margin: 60px;
     padding: 8px;
     width: 12%;
     font-family: "Montserrat";
