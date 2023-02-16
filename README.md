@@ -166,3 +166,4 @@ Valitar es una aplicación web diseñada para que la usuaria pueda verificar la 
 - [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
 - [X] **Seguir los principios básicos de diseño visual**
+
