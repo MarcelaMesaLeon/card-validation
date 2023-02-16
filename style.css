@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    font-family: "Montserrat";
+    font-size: 16px;
+    background-color: #efeded;    
+}
+.tittleContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 60px;
+    color: #315b43;
+}
+
+/* Estilos formulario */
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+.formContainer p{
+    padding: 15px;
+    font-size: 25px;
+}
+.formContainer input{
+    padding: 10px;
+    width: 24%;
+    height: 4%;
+    font-family: "Montserrat";
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;    
+}
+#creditCardNum{
+    width: 18%;
+}
+.redNumb{
+    border-color: red;
+    background-color: rgb(243, 204, 204);
+}
+.emptyInput{
+    border-color: red;
+}
+#empty{
+    font-size: 12px;
+    color: red;
+    padding: 5px;
+}
+.actionButton{
+    margin: 60px;
+    padding: 8px;
+    width: 12%;
+    font-family: "Montserrat";
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #315b43;
+    color: #efeded;
+    font-weight: 600;
+    border-color: #14251b;
+    border-style: double;
+}
+.formContainer button:hover{
+    cursor: pointer;
+    background-color: #7DBF99;
+    color: black;
+    border-color: #315b43;   
+}
+.noneElement{
+    display: none;
+}
+
+/* Estilos card tarjeta de crédito */
+.creditCardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.creditCardStyle{
+    width: 550px;
+    height: 310px;
+    background-image: url("./img/fondo1.png");
+    border-radius: 20px;
+}
+.headerSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 25px;
+}
+.headerSection p{
+    font-size: 45px;
+    font-weight: 600;
+    font-style: italic;
+    color: #192e22;
+}
+#chip{
+    padding: 5px;
+    margin-left: 400px;
+    
+}
+.mainSection{
+    padding-left: 45px;
+}
+#numb{
+    font-family: "Play";
+    font-size: 30px;
+    padding-bottom: 12px;
+}
+#nameCc{
+    font-size: 20px;
+}
+
+/* Estilos mensaje de validación */
+#validation{
+    display: flex;
+    justify-content: center;
+}
+.validationContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.validationContainer p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.validationContainer img{
+    width: 70px;
+}
+
+/* Estilos botón regresar */
+#goBack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
