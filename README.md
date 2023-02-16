@@ -1,3 +1,13 @@
+# VALITAR
+
+Valitar es una aplicación web diseñada para que la usuaria pueda verificar la validez de una tarjeta de crédito, adicionalmente permite identificar la franquicia a la que pertenece dicha tarjeta.
+
+- Esta aplicación cuenta con una interfaz sencilla y amigable que le permite a las personas verificar la validez de una tarjeta de crédito y adicionalmente la franquicia la que pertenece dicha trajeta. 
+- Está orientada tanto a los dueños de las trajetas como a toda persona que en sus diferentes contextos necesiten validar una tarjeta de crédito.
+- Permite de manera sencilla y rápida solucionar la necesidad de validar una tarjeta de crédito.
+
+## Objetivos de aprendizaje
+
 ### HTML
 
 - [X] **Uso de HTML semántico**
