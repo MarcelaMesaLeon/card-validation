@@ -36,7 +36,7 @@ h1{
     font-family: "Montserrat";
     font-size: 15px;
     text-align: center;
-    border-radius: 20px;    
+    border-radius: 20px; 
 }
 #creditCardNum{
     width: 18%;
@@ -45,10 +45,7 @@ h1{
     border-color: red;
     background-color: rgb(243, 204, 204);
 }
-.emptyInput{
-    border-color: red;
-}
-#empty{
+p.textEmpty{
     font-size: 12px;
     color: red;
     padding: 5px;
@@ -65,12 +62,12 @@ h1{
     font-weight: 600;
     border-color: #14251b;
     border-style: double;
+    transition: all ease 0.5s;
 }
 .formContainer button:hover{
-    cursor: pointer;
-    background-color: #7DBF99;
-    color: black;
-    border-color: #315b43;   
+    cursor: pointer;  
+    background-color: #739c5b;
+    box-shadow: 0px 2px 15px #204d26;
 }
 .noneElement{
     display: none;
@@ -145,6 +142,10 @@ h1{
     flex-direction: column;
     align-items: center;
 }
-
-
+#goBack button:hover{
+    cursor: pointer;
+    background-color: #739c5b;
+    transition: all ease 0.5s;
+    box-shadow: 0px 2px 15px #204d26;
+}
 

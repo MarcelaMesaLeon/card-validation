@@ -109,13 +109,5 @@ function toReplace(arr){
 }
 
 
-
-
-
-
-
-
-
-
-
 export default validator;
+
