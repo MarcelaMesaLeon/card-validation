@@ -15,11 +15,13 @@ form.form.addEventListener("submit", (e) => {
   const userName = campUserName.value; 
   
   if (userNum === "") {
-    const textEmpty = document.createElement("p");
-    form.form.insertBefore(textEmpty, buttonForm);   
-    textEmpty.innerHTML = "*Este campo no debe quedar vacío, ingrese el número de tarjeta de crédito";
-    textEmpty.classList.add("textEmpty"); 
-    campUserNum.classList.add('redNumb');
+    if (form.form.childElementCount === 5) {
+      const textEmpty = document.createElement("p");
+      form.form.insertBefore(textEmpty, buttonForm);
+      textEmpty.innerHTML = "*Este campo no debe quedar vacío, ingrese el número de tarjeta de crédito";
+      textEmpty.classList.add("textEmpty");
+      campUserNum.classList.add("redNumb");
+    }    
   } else {
     const validation = validator.isValid(userNum);
     form.form.reset();   
