@@ -9,6 +9,27 @@ const validator = {
     const stringComplete = textToShow(stringToArray);
     return stringComplete;
   },
+  franchise: (userNum) => {
+    let image = "";
+    if(userNum.slice(0, 4) === "1800"){
+      image = "./img/jcb.png"; 
+    } else if((userNum.slice(0, 4) === "2014" || userNum.slice(0, 4) === "2149") 
+    || (userNum.slice(0, 3) === "300" || userNum.slice(0, 3) === "301" || userNum.slice(0, 3) === "302" || userNum.slice(0, 3) === "303" || userNum.slice(0, 3) === "304" || userNum.slice(0, 3) === "305") 
+    || (userNum.slice(0, 2) === "36" || userNum.slice(0, 2) === "38")){
+      image = "./img/dinersClub.png"; 
+    } else if(userNum.slice(0, 2) === "34" || userNum.slice(0, 2) === "37"){
+      image = "./img/americanExpress.png"; 
+    }else if (userNum.slice(0, 2) === "51" || userNum.slice(0, 2) === "52" || userNum.slice(0, 2) === "53" || userNum.slice(0, 2) === "54" || userNum.slice(0, 2) === "55"){
+      image = "./img/mastercard.png";
+    }else if (userNum.slice(0, 1) === "4"){
+      image = "./img/visa.png";
+    }else if(userNum.slice(0, 4) === "6011" || userNum.slice(0, 4) === "2131"){
+      image = "./img/discover.png"; 
+    }else{
+      image;
+    }
+    return image;  
+  }
 };
 
 // isValid
@@ -88,10 +109,5 @@ function toReplace(arr){
 }
 
 
-
-
-
-
-
-
 export default validator;
+
